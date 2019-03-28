@@ -42,7 +42,7 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'Project description',
-      default: 'A weex project',
+      default: 'A Weex Toolkit plugin project',
     },
     author: {
       when: 'isNotTest',
@@ -52,9 +52,6 @@ module.exports = {
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
-
-    sortDependencies(data, green)
-
-    console.log(chalk.green('Create Weex Toolkit Plugin template success!'))
+    console.log(green('Create Weex Toolkit Plugin template success!'))
   }
 }
